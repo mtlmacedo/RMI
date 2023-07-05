@@ -80,7 +80,7 @@ public class Server extends java.rmi.server.UnicastRemoteObject implements IRece
 
         try {
             registry = LocateRegistry.createRegistry(thisPort);
-            registry.rebind("rmiServer", this);
+            registry.rebind("server", this);
         } catch (RemoteException e) {
             throw e;
         }
